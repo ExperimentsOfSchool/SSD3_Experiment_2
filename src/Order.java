@@ -4,7 +4,7 @@ import java.util.Iterator;
 /**
  * Created by Lawrence on 10/17/15.
  */
-public class Order {
+public class Order implements Iterable<OrderItem> {
     private ArrayList<OrderItem> items;
     public Order() {
         items  = new ArrayList<>();
