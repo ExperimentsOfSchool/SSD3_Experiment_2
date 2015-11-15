@@ -426,12 +426,17 @@ public class GourmetCoffee  {
 				while (item_ite.hasNext()) {
 					OrderItem orderItem = item_ite.next();
 					if (orderItem.getProduct().equals(product)) {
-						sum++;
+						sum+= orderItem.getQuantity();
 					}
 				}
 			}
 			stdOut.println(product.getCode() + " " + sum);
 		}
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.getStackTrace();
+        }
 	}
 
 	/*
